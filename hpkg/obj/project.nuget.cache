@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TYEGhO04LKw=",
+  "success": true,
+  "projectFilePath": "/home/willow-tree/桌面/HyperPackage/hpkg/hpkg.csproj",
+  "expectedPackageFiles": [
+    "/home/willow-tree/.nuget/packages/microsoft.dotnet.ilcompiler/9.0.5/microsoft.dotnet.ilcompiler.9.0.5.nupkg.sha512",
+    "/home/willow-tree/.nuget/packages/microsoft.net.illink.tasks/9.0.5/microsoft.net.illink.tasks.9.0.5.nupkg.sha512",
+    "/home/willow-tree/.nuget/packages/runtime.linux-x64.microsoft.dotnet.ilcompiler/9.0.5/runtime.linux-x64.microsoft.dotnet.ilcompiler.9.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

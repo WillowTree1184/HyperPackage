@@ -1,0 +1,11 @@
+/home/willow-tree/桌面/HyperPackage/HyperPackage/bin/Debug/net9.0/HyperPackageManager.deps.json
+/home/willow-tree/桌面/HyperPackage/HyperPackage/bin/Debug/net9.0/HyperPackageManager.dll
+/home/willow-tree/桌面/HyperPackage/HyperPackage/bin/Debug/net9.0/HyperPackageManager.pdb
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/HyperPackageManager.GeneratedMSBuildEditorConfig.editorconfig
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/HyperPackageManager.AssemblyInfoInputs.cache
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/HyperPackageManager.AssemblyInfo.cs
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/HyperPackageManager.csproj.CoreCompileInputs.cache
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/HyperPackageManager.dll
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/refint/HyperPackageManager.dll
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/HyperPackageManager.pdb
+/home/willow-tree/桌面/HyperPackage/HyperPackage/obj/Debug/net9.0/ref/HyperPackageManager.dll
