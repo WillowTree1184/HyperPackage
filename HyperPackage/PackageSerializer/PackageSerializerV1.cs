@@ -70,15 +70,12 @@ public class PackageSerializerV1 : IPackageSerializer
     #region Deserialize
     public List<PackageItem> Deserialize(byte[] data)
     {
-        Console.WriteLine("Deserializing package...");
         using (MemoryStream memoryStream = new MemoryStream(data))
         {
-            // Read the manifest length (NS)
+            // Read the manifest length
             byte[] manifestLengthBytes = new byte[4];
             memoryStream.Read(manifestLengthBytes, 0, 4);
             int manifestLength = BitConverter.ToInt32(manifestLengthBytes, 0);
-
-            Console.WriteLine($"Manifest length: {manifestLength}");
 
             // Read the manifest
             byte[] manifest = new byte[manifestLength];

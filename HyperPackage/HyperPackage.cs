@@ -54,7 +54,9 @@ public class HyperPackage
             memoryStream.Read(versionBytes, 0, 4);
             int version = BitConverter.ToInt32(versionBytes, 0);
 
-            Console.WriteLine($"Loading from -v {version}");
+            // Read the body
+            byte[] body = new byte[memoryStream.Length - memoryStream.Position];
+            memoryStream.Read(body, 0, body.Length);
 
             // Check for a supported serializer
             foreach (var serializer in Serializers)
@@ -62,7 +64,7 @@ public class HyperPackage
                 // If supported, use the serializer
                 if (serializer.IsSupported(version))
                 {
-                    Items = serializer.Deserialize(memoryStream.ToArray());
+                    Items = serializer.Deserialize(body);
                     break;
                 }
             }

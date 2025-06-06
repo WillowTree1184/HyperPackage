@@ -24,7 +24,7 @@ class Program
 
             foreach (var item in readPackage.Items)
             {
-                File.WriteAllBytes($"/home/willow-tree/hpkgtest/release/{item.name}", item.data);
+                Console.WriteLine($"Saving {item.name}, size {item.data.Length}");
             }
         }
         catch (Exception ex)
