@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HyperPackageManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d60d7f5e7f2ae160ab3fbfe026672955dcfe9a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("HyperPackageManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HyperPackageManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
