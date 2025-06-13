@@ -1,6 +1,6 @@
 # Hyper Package
 
-A solution for storing data and files in a unified package format.
+A simple solution for storing data and files in a unified package format.
 
 ## Overview
 
