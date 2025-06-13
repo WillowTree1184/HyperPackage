@@ -1,7 +1,7 @@
-using System;
 using System.Text;
+using HyperPackage.Core;
 
-namespace HyperPackageManager.PackageSerializer;
+namespace HyperPackage.PackageSerializer;
 
 /*
 Structure Of HyperPackage V1 ("Others" part)
@@ -49,14 +49,21 @@ public class PackageSerializerV1 : IPackageSerializer
                 data.AddRange(item.data);
             }
 
-            // Write the manifest
-            foreach (var (name, location, length) in manifest)
+            using (MemoryStream manifestStream = new MemoryStream())
             {
-                byte[] nameBytes = Encoding.UTF8.GetBytes(name);
-                memoryStream.Write(BitConverter.GetBytes(nameBytes.Length), 0, 4);
-                memoryStream.Write(nameBytes, 0, nameBytes.Length);
-                memoryStream.Write(BitConverter.GetBytes(location), 0, 4);
-                memoryStream.Write(BitConverter.GetBytes(length), 0, 4);
+                // Write the manifest
+                foreach (var (name, location, length) in manifest)
+                {
+                    byte[] nameBytes = Encoding.UTF8.GetBytes(name);
+                    manifestStream.Write(BitConverter.GetBytes(nameBytes.Length), 0, 4);
+                    manifestStream.Write(nameBytes, 0, nameBytes.Length);
+                    manifestStream.Write(BitConverter.GetBytes(location), 0, 4);
+                    manifestStream.Write(BitConverter.GetBytes(length), 0, 4);
+                }
+
+                // Write the manifest length
+                memoryStream.Write(BitConverter.GetBytes(manifestStream.Length), 0, 4);
+                memoryStream.Write(manifestStream.ToArray(), 0, (int)manifestStream.Length);
             }
 
             // Write the data

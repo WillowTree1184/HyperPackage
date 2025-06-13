@@ -1,4 +1,4 @@
-﻿using HyperPackageManager;
+﻿using HyperPackage.Core;
 
 namespace hpkg;
 
@@ -8,7 +8,7 @@ class Program
     {
         try
         {
-            HyperPackage package = new HyperPackage(1);
+            HyperPackageFile package = new HyperPackageFile(1);
 
             package.Items.Add(new PackageItem("/home/willow-tree/hpkgtest/111.txt"));
             package.Items.Add(new PackageItem("/home/willow-tree/hpkgtest/222.txt"));
@@ -17,7 +17,7 @@ class Program
 
             Console.WriteLine("Package saved successfully.");
 
-            HyperPackage readPackage = new HyperPackage(1);
+            HyperPackageFile readPackage = new HyperPackageFile(1);
             readPackage.Load("/home/willow-tree/hpkgtest/package.hpkg");
 
             Console.WriteLine("Package loaded successfully.");
@@ -25,6 +25,7 @@ class Program
             foreach (var item in readPackage.Items)
             {
                 Console.WriteLine($"Saving {item.name}, size {item.data.Length}");
+                File.WriteAllBytes($"/home/willow-tree/hpkgtest/release/{item.name}", item.data);
             }
         }
         catch (Exception ex)

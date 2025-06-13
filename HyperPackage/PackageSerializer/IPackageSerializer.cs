@@ -1,6 +1,6 @@
-using System;
+using HyperPackage.Core;
 
-namespace HyperPackageManager.PackageSerializer;
+namespace HyperPackage.PackageSerializer;
 
 /// <summary>
 /// Interface for package serialization.
