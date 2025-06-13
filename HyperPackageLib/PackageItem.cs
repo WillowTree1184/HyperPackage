@@ -1,4 +1,4 @@
-namespace HyperPackage.Core;
+namespace HyperPackageLib;
 
 /// <summary>
 /// Hyper package item data.

@@ -1,7 +1,7 @@
 using System.Text;
-using HyperPackage.Core;
+using HyperPackageLib;
 
-namespace HyperPackage.PackageSerializer;
+namespace HyperPackageLib.Serializer;
 
 /*
 Structure Of HyperPackage V1 ("Others" part)

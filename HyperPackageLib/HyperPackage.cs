@@ -1,9 +1,8 @@
 ﻿using System.IO.Compression;
 using System.Text;
-using HyperPackage.PackageSerializer;
+using HyperPackageLib.Serializer;
 
-namespace HyperPackage.Core;
-
+namespace HyperPackageLib;
 /*
 Structure Of HyperPackage
 
@@ -13,19 +12,19 @@ Structure Of HyperPackage
 
 */
 
-public class HyperPackageFile
+public class HyperPackage
 {
     public static List<IPackageSerializer> Serializers { get; set; } = new List<IPackageSerializer>
     {
         new PackageSerializerV1()
     };
 
-    public HyperPackageFile(int version)
+    public HyperPackage(int version)
     {
         Version = version;
     }
 
-    public HyperPackageFile(List<PackageItem> items, int version)
+    public HyperPackage(List<PackageItem> items, int version)
     {
         Items = items;
         Version = version;
