@@ -13,12 +13,12 @@ class Program
             package.Items.Add(new PackageItem("/home/willow-tree/hpkgtest/111.txt"));
             package.Items.Add(new PackageItem("/home/willow-tree/hpkgtest/222.txt"));
 
-            package.Save("/home/willow-tree/hpkgtest/package.hpkg");
+            package.PackToFile("/home/willow-tree/hpkgtest/package.hpkg");
 
             Console.WriteLine("Package saved successfully.");
 
             HyperPackage readPackage = new HyperPackage(1);
-            readPackage.Load("/home/willow-tree/hpkgtest/package.hpkg");
+            readPackage.LoadFromFile("/home/willow-tree/hpkgtest/package.hpkg");
 
             Console.WriteLine("Package loaded successfully.");
 

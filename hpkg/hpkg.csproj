@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../HyperPackage/HyperPackageLib.csproj" />
+    <ProjectReference Include="../HyperPackageLib/HyperPackageLib.csproj" />
   </ItemGroup>
 
 </Project>

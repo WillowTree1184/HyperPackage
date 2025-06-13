@@ -3,6 +3,7 @@ using System.Text;
 using HyperPackageLib.Serializer;
 
 namespace HyperPackageLib;
+
 /*
 Structure Of HyperPackage
 
@@ -19,9 +20,16 @@ public class HyperPackage
         new PackageSerializerV1()
     };
 
+    public HyperPackage() { }
+
     public HyperPackage(int version)
     {
         Version = version;
+    }
+
+    public HyperPackage(byte[] data)
+    {
+        Load(data);
     }
 
     public HyperPackage(List<PackageItem> items, int version)
@@ -32,7 +40,7 @@ public class HyperPackage
 
     public List<PackageItem> Items { get; set; } = new List<PackageItem>();
 
-    public int Version { get; set; }
+    public int Version { get; private set; } = 1;
 
     public void Load(byte[] data)
     {
@@ -71,15 +79,9 @@ public class HyperPackage
         }
     }
 
-    public void Load(string path) => Load(File.ReadAllBytes(path));
+    public void LoadFromFile(string path) => Load(File.ReadAllBytes(path));
 
-    public void Save(string path)
-    {
-        byte[] data = Serialize();
-        File.WriteAllBytes(path, data);
-    }
-
-    public byte[] Serialize()
+    public byte[] Pack()
     {
         using (MemoryStream memoryStream = new MemoryStream())
         {
@@ -104,4 +106,6 @@ public class HyperPackage
             return memoryStream.ToArray();
         }
     }
+
+    public void PackToFile(string path) => File.WriteAllBytes(path, Pack());
 }
